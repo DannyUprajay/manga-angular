@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { MangaListComponent } from './manga-list/manga-list.component';
+import { MangaDetailsComponent } from './manga-details/manga-details.component';
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    MangaListComponent,
+    MangaDetailsComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,

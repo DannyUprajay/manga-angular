@@ -1,0 +1,23 @@
+<p>user works!</p>
+
+<div class="container">
+    <div >
+        <div *ngFor="let item of users">
+            <h3>{{item.id}}</h3>
+        <div class="col-md-3">
+
+                <div class="">
+                    <p>Nom : {{item.name}}</p>
+                </div>
+                <div  class="">
+                    <p>Prenom : {{item.username}} </p>
+                </div>
+                <div class="">
+                    <p>Email : {{item.email}}</p>
+                </div>
+            </div>
+            <button (click)="selectUser()" type="button" class="btn btn-primary">Primary</button>
+            <app-user-detail [userEnfant]="userParent "></app-user-detail>
+        </div>
+    </div>
+</div>

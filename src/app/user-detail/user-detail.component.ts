@@ -8,7 +8,7 @@ import {IUser} from "../iuser";
 })
 export class UserDetailComponent {
 
-  @Input() userEnfant:  IUser| undefined;
+  @Input() userEnfant:  IUser | undefined;
 
 
 }

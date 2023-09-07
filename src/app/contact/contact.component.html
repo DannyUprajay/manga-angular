@@ -1,0 +1,9 @@
+<p>contact works!</p>
+<div class="container">
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <input type="text"  name="nom" ngModel required>
+
+  <input type="password" name="password" ngModel required>
+  <button type="submit" [disabled]="!form.valid">Login</button>
+</form>
+</div>

@@ -15,8 +15,8 @@ export class UserService {
     return this.serviceHttpClient.get<IUser[]>(this.url);
   }
 
-  fetchById(id: any){
-    return this.serviceHttpClient.get<IUser[]>(this.url+'/' +id);
+  fetchById(id: number){
+    return this.serviceHttpClient.get<IUser>(this.url+'/' +id);
   }
 
 }

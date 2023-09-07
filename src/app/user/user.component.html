@@ -2,22 +2,25 @@
 
 <div class="container">
     <div >
-        <div *ngFor="let item of users">
-            <h3>{{item.id}}</h3>
+        <div *ngFor="let user of users">
+            <h3>{{user.id}}</h3>
         <div class="col-md-3">
 
                 <div class="">
-                    <p>Nom : {{item.name}}</p>
+                  <a routerLink="/user/{{user.id}}">
+                    <p>Nom : {{user.name}}</p>
+                  </a>
                 </div>
                 <div  class="">
-                    <p>Prenom : {{item.username}} </p>
+                    <p>Prenom : {{user.username}} </p>
                 </div>
                 <div class="">
-                    <p>Email : {{item.email}}</p>
+                    <p>Email : {{user.email}}</p>
                 </div>
             </div>
-            <button (click)="selectUser()" type="button" class="btn btn-primary">Primary</button>
-            <app-user-detail [userEnfant]="userParent "></app-user-detail>
+          <button (click)="selectUser(user)" type="button" class="btn btn-primary">Détail</button>
         </div>
+           <app-user-detail [userEnfant]="userParent"></app-user-detail>
+
     </div>
 </div>

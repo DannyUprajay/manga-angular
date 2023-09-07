@@ -10,6 +10,7 @@ import {IUser} from "../iuser";
 export class UserComponent implements OnInit{
 
   users:IUser[] = [];
+  userParent:IUser|undefined;
   constructor(private service: UserService) {
   }
   ngOnInit(){
@@ -17,7 +18,7 @@ export class UserComponent implements OnInit{
     console.log("marche");
   }
 
-  userParent:IUser|undefined;
+
   getUser(){
     this.service.fetchAllUsers().subscribe(data =>{
       this.users=data;

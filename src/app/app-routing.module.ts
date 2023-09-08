@@ -7,6 +7,7 @@ import {Error404Component} from "./error404/error404.component";
 import {UserComponent} from "./user/user.component";
 import {UserRedirectComponent} from "./user-redirect/user-redirect.component";
 import {ContactComponent} from "./contact/contact.component";
+import {ContactReactiveComponent} from "./contact-reactive/contact-reactive.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'user', component: UserComponent},
   {path: 'user/:id', component: UserRedirectComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'contact2', component: ContactReactiveComponent},
   {path: '**', component: Error404Component}
 ];
 

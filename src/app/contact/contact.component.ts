@@ -8,17 +8,30 @@ import {NgForm} from "@angular/forms";
 })
 export class ContactComponent {
 
-  nom ="bonjour"
-  onSubmit(form: any){
+  messageName:string= "";
+  messageMdp:string= "";
+  onSubmit(form: NgForm){
 
-    console.log(form.value);
-    form.reset();
-    if(form.value.nom.length < 5){
-      console.log("nop")
-      console.log( form.value.length)
-    }else if(form.value.nom.length > 5){
-      console.log("yes")
+    if(form.valid){
+      if(form.value.nom.length < 5 || form.value.nom == ""){
+        this.messageName = "‍☠"
+      }
+      if(form.value.nom.length > 5){
+        this.messageName = "👍"
+      }
+      if(form.value.password.length < 6 || form.value.password == ""){
+        this.messageMdp = "‍☠"
+      }
+      if(form.value.password.length > 6){
+        this.messageMdp = "👍"
+      }
+
     }
+
+    form.reset();
+
   }
+
+
 
 }

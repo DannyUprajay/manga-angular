@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +12,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserRedirectComponent } from './user-redirect/user-redirect.component';
 import { ContactComponent } from './contact/contact.component';
+import { ContactReactiveComponent } from './contact-reactive/contact-reactive.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +25,14 @@ import { ContactComponent } from './contact/contact.component';
     UserDetailComponent,
     UserRedirectComponent,
     ContactComponent,
+    ContactReactiveComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

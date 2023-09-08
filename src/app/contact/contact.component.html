@@ -2,8 +2,13 @@
 <div class="container">
 <form #form="ngForm" (ngSubmit)="onSubmit(form)">
   <input type="text"  name="nom" ngModel required>
-
+<div>
+  <small>{{messageName}}</small>
+</div>
   <input type="password" name="password" ngModel required>
+  <div>
+    <small>{{messageMdp}}</small>
+  </div>
   <button type="submit" [disabled]="!form.valid">Login</button>
 </form>
 </div>
